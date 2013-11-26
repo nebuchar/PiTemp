@@ -1,18 +1,30 @@
 #!/usr/bin/php
 <?php
+require 'vendor/autoload.php';
 include dirname(__FILE__) . '/lib/functions.php';
+
+//Pdo
+$database = new medoo([
+    'database_type' => 'sqlite',
+    'database_file' => 'db.sqlite'
+]);
 
 // Get temperature (see http://www.raspberrypi.org/phpBB3/viewtopic.php?f=45&t=25100)
 $temp = exec('/opt/vc/bin/vcgencmd measure_temp');
 preg_match("/^temp=([\d.]+)/", $temp, $matches);
 
 // Temperature is stored in at index 1.
-$temp = $matches[1];
-$date = new DateTime();
-$line = $date->format(DateTime::ISO8601) . ";" . $temp . "\n";
+$temp = (float)$matches[1];
+$date = time();
+//$line = $date->format(DateTime::ISO8601) . ";" . $temp . "\n";
 // Write the temp to a file
-$filePath = realpath(dirname(__FILE__));
-file_put_contents(dirname(__FILE__) . '/temperature.log', $line, FILE_APPEND);
+//$filePath = realpath(dirname(__FILE__));
+//file_put_contents(dirname(__FILE__) . '/temperature.log', $line, FILE_APPEND);
+
+$database->insert('temp_log', [
+	'time' => time(),
+	'temp' => $date
+]);
 
 // Check if we should send a notification 
 $config = getConfig();

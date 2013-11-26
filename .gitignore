@@ -8,3 +8,5 @@ local.config.php
 .build*
 .settings
 .project
+
+/vendor/

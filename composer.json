@@ -1,0 +1,13 @@
+{
+    "name": "albert/pi-temp",
+    "authors": [
+        {
+            "name": "Albert",
+            "email": "nebuchar@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+    	"catfan/medoo": "dev-develop"
+    }
+}

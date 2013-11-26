@@ -1,6 +1,13 @@
 <?php 
 // Get average functions and all that stuff
+require 'vendor/autoload.php';
 include 'lib/functions.php';
+
+//Pdo
+$database = new medoo([
+    'database_type' => 'sqlite',
+    'database_file' => 'db.sqlite'
+]);
 
 // Load the configuration
 $config = getConfig();

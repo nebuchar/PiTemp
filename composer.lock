@@ -1,0 +1,74 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "4d2445f8353848cd9abdeee63993343a",
+    "packages": [
+        {
+            "name": "catfan/medoo",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/catfan/Medoo.git",
+                "reference": "ad9158c1def40a552073cdb445fe693646f4d9fd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/catfan/Medoo/zipball/ad9158c1def40a552073cdb445fe693646f4d9fd",
+                "reference": "ad9158c1def40a552073cdb445fe693646f4d9fd",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pdo": "*",
+                "php": ">=5.1"
+            },
+            "suggest": {
+                "ext-pdo-mssql": "For MSSQL databases",
+                "ext-pdo-mysql": "For MySQL databases",
+                "ext-pdo-pqsql": "For PostgreSQL databases",
+                "ext-pdo-sqlite": "For SQLite databases"
+            },
+            "type": "framework",
+            "autoload": {
+                "files": [
+                    "medoo.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Angel Lai",
+                    "email": "angel.lai.cat@gmail.com"
+                }
+            ],
+            "description": "The Lightest PHP database framework to accelerate development",
+            "homepage": "http://medoo.in",
+            "keywords": [
+                "database",
+                "mysql",
+                "sql"
+            ],
+            "time": "2013-11-03 11:50:15"
+        }
+    ],
+    "packages-dev": [
+
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "catfan/medoo": 20
+    },
+    "platform": [
+
+    ],
+    "platform-dev": [
+
+    ]
+}
